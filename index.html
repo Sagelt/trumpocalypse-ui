@@ -1,7 +1,7 @@
 ---
 title: trumpocalypse
 description: our slow slide out of normal
-image: /posts/trumpocalypse/trump.jpg
+image: /pages/trumpocalypse/trump.jpg
 ---
 <head>
   <meta charset="utf-8">
@@ -18,7 +18,7 @@ image: /posts/trumpocalypse/trump.jpg
   <meta property="og:type" content="article">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:description" content="{ page.description | escape }}">
+  <meta name="twitter:description" content="{{ page.description | escape }}">
   <meta name="twitter:title" content="{{ page.title | escape }}">
   <meta name="twitter:url" content="http://{{ page.url | prepend: site.baseurl | prepend: site.url }}">
   <meta name="twitter:site" content="@{{ site.twitter_username }}">
