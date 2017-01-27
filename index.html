@@ -235,7 +235,7 @@ image: /pages/trumpocalypse/trump.jpg
           </div>
         </div>
         {% assign events = day[1] | sort %}
-        {% for event in events %}
+        {% for event in events reversed %}
           <div class="row top-buffer">
             <div class="col-md-3 col-md-offset-1">
               <div class="tag-box">
