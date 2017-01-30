@@ -26,6 +26,7 @@ image: /pages/trumpocalypse/trump.jpg
   <meta name="twitter:domain" content="{{ site.url }}">
   <meta property="twitter:image" content="http://{{ site.url }}{{ page.image }}">
 
+  <script src="https://use.fontawesome.com/3543a4d7b1.js"></script>
 
   {% if site.google_analytics %}
     <script>
@@ -208,51 +209,68 @@ image: /pages/trumpocalypse/trump.jpg
   </style>
 </head>
 <body>
+  <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="main-title">The Trump Administration</div>
+      </div>
+    </nav>
+  </nav>
   <div class="container">
-  <div class="main-title">The Trump Administration</div>
-  <div class="main-subtitle">Day by Day</div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="main-subtitle">Day by Day</div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-2 col-md-offset-5">
+        <a role="button" class="btn btn-primary btn-sm btn-block" href="https://github.com/Sagelt/trumpocalypse">Submit a link on Github <i class="fa fa-github" aria-hidden="true"></i></button>
+      </div>
+    </div>
 
-  {% assign years = site.data.trumpocalypse | sort %}
-  {% assign dayzero_seconds = "2017-01-19" | date: '%s' %} 
+    {% assign years = site.data.trumpocalypse | sort %}
+    {% assign dayzero_seconds = "2017-01-19" | date: '%s' %} 
 
-  {% for year in years reversed %}
-    {% assign months = year[1] | sort %}
-    {% for month in months reversed %}
-      {% assign days = month[1] | sort %}
-      {% for day in days reversed %}
-        {% assign item_date = year[0] | append: "-" | append: month[0] | append: "-" | append: day[0] %}
-        {% assign item_seconds = item_date | date: '%s' %}
-        {% assign seconds_diff = item_seconds | minus: dayzero_seconds %}
-        {% assign days_in_office = seconds_diff | divided_by: 3600 | divided_by: 24 %}
-        <div class="row">
-          <div class="col-md-4 col-md-offset-4">
-            <div class="day" id="{{ item_date }}">Day {{ days_in_office }}</div>
+    {% for year in years reversed %}
+      {% assign months = year[1] | sort %}
+      {% for month in months reversed %}
+        {% assign days = month[1] | sort %}
+        {% for day in days reversed %}
+          {% assign item_date = year[0] | append: "-" | append: month[0] | append: "-" | append: day[0] %}
+          {% assign item_seconds = item_date | date: '%s' %}
+          {% assign seconds_diff = item_seconds | minus: dayzero_seconds %}
+          {% assign days_in_office = seconds_diff | divided_by: 3600 | divided_by: 24 %}
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+              <div class="day" id="{{ item_date }}">Day {{ days_in_office }}</div>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-md-offset-4">
-            <div class="date">{{ item_date | date: "%A %e %B %Y" }}</div>
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+              <div class="date">{{ item_date | date: "%A %e %B %Y" }}</div>
+            </div>
           </div>
-        </div>
-        {% assign events = day[1] | sort %}
-        {% for event in events reversed %}
-          <div class="row top-buffer" id="{{ item_date }}-{{ event[0] }}">
-            <div class="col-md-3 col-md-offset-1">
-              <div class="tag-box">
-                {% for tag in event[1].tags%}
-                  <span class="tag {{tag}}">{{tag}}</span>
-                {% endfor %}
+          {% assign events = day[1] | sort %}
+          {% for event in events reversed %}
+            <div class="row top-buffer" id="{{ item_date }}-{{ event[0] }}">
+              <div class="col-md-3 col-md-offset-1">
+                <div class="tag-box">
+                  {% for tag in event[1].tags%}
+                    <span class="tag {{tag}}">{{tag}}</span>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="title"><a href="{{ event[1].url }}">{{ event[1].title }}</a></div>
+                {% if event[1].desc %}
+                  <div class="desc">{{ event[1].desc }}</div>
+                {% endif %}
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="title"><a href="{{ event[1].url }}">{{ event[1].title }}</a></div>
-              {% if event[1].desc %}
-                <div class="desc">{{ event[1].desc }}</div>
-              {% endif %}
-            </div>
-          </div>
+          {% endfor %}
         {% endfor %}
       {% endfor %}
     {% endfor %}
-  {% endfor %}
+  </div>
 </body>
