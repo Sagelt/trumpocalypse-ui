@@ -314,7 +314,15 @@ image: /pages/trumpocalypse/trump.jpg
               <div class="col-md-3 col-md-offset-1">
                 <div class="tag-box">
                   {% for tag in event[1].tags%}
-                    <span class="tag {{tag}}">{{tag}}</span>
+                    <span class="tag {{ tag }}">
+                      {% if tag == "Twitter" %}
+                        {{ tag }} <i class="fa fa-twitter" aria-hidden="true"></i>
+                      {% elsif tag == "Lawsuit" %}
+                        {{ tag}} <i class="fa fa-institution" aria-hidden="true"></i>
+                      {% else %}
+                        {{ tag }}
+                      {% endif %}
+                   </span>
                   {% endfor %}
                 </div>
               </div>
