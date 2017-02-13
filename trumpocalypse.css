@@ -10,7 +10,7 @@
   text-align: center;
   margin: 30px 0 10px 0;
   border: 2px solid black;
-  border-width: 2px 0 2px 0;
+  border-width: 0 0 2px 0;
 }
 
 .main-subtitle {
@@ -72,154 +72,10 @@
 .tag {
   font-family: 'Cormorant Garamond', serif;
   display: inline-block;
-  text-align: center;
   margin: 3px;
   padding-left: 3px;
   padding-right: 3px;
   padding-top: 0px;
   padding-bottom: 0px;
   font-size: 10pt;
-  min-width: 90px;
-  border-radius: 10px;
-  border: 1px solid black;
-  background-color: #e0e0e0;
-  color: #000000;
-}
-
-.AltFacts {
-  border-color: MediumVioletRed;
-  background-color: MediumVioletRed;
-  color: White;
-}
-
-.BabyHands {
-  border-color: Pink;
-  background-color: MistyRose;
-  color: Black;
-}
-
-.ButLikeASadHaHa {
-  border-color: MediumOrchid;
-  background-color: MediumOrchid;
-  color: White;
-}
-
-.Commentary {
-  border-color: MediumSeaGreen ;
-  background-color: MediumSeaGreen;
-  color: #ffffff;
-}
-
-.ConstitutionalCrisis {
-  border-color: FireBrick ;
-  background-color: Maroon;
-  color: White;
-}
-
-.GloriousLeader {
-  border-color: #0000ff;
-  background: repeating-linear-gradient(-20deg, #ffd0d0, #ffd0d0 5px, #ffffff 5px, #ffffff 10px);
-  color: #0000ff;
-}
-
-.GOP {
-  border-color: FireBrick;
-  background-color: MediumBlue;
-  color: White;
-}
-
-.HaHa {
-  border-color: MediumOrchid;
-  background-color: MediumOrchid;
-  color: White;
-}
-
-.Hate {
-  border-color: Black;
-  background-color: Black;
-  color: White;
-}
-
-.Hmmm {}
-
-.ILoveWomen {
-  border-color: Pink;
-  background-color: White;
-  color: DeepPink;
-}
-
-.Lawsuit {}
-
-.Mexico {
-  border-color: #f00;
-  background: repeating-linear-gradient(90deg, #cfc, #cfc 30px, #fff 30px, #fff 60px, #fcc 60px, #fcc 90px);
-  color: Black;
-}
-
-.Misc {
-  border-color: #f0f0f0;
-  background-color: #f0f0f0;
-  color: #000000;
-}
-
-.Nazi {
-  border-color: #000000;
-  background-color: #ff0000;
-  color: #ffffff;
-}
-
-.News {
-  border-color: #f0f0f0;
-  background-color: #f0f0f0;
-  color: #000000;
-}
-
-.PresidentBannon {
-  border-color: DarkGoldenRod;
-  background-color: GoldenRod;
-  color: White;
-}
-
-.Punch {
-  border-color: Tomato;
-  background-color: Tomato;
-  color: #ffffff;
-}
-
-.Russia {
-  border-color: Blue;
-  background: repeating-linear-gradient(0deg, #fcc, #fcc 5px, #ccf 5px, #ccf 13px, #fff 13px, #fff 20px);
-  color: Black;
-}
-
-.Satire {}
-
-.ThanksObama {
-  border-color: Chocolate;
-  background-color: Chocolate;
-  color: #ffffff;
-}
-
-.TheWall {
-  border-color: Black;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAK0lEQ…DBfwYiACNMDUiDgoICnI+udyAVkuwZdMejew6nL2mvEADwmydJ088CoQAAAABJRU5ErkJggg==) repeat;
-  color: Black;
-}
-
-.TravelBan {
-  border-color: BurlyWood;
-  background-color: BurlyWood;
-  color: White;
-}
-
-.Twitter {
-  border-color: #0084b4;
-  background-color: #0084b4;
-  color: #ffffff;
-}
-
-.WA {
-  border-color: DarkGreen ;
-  background-color: DarkGreen;
-  color: #ffffff;
 }
