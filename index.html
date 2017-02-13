@@ -111,7 +111,7 @@ image: trump.jpg
                 <div class="tag-box">
                   {% for tag in event[1].tags %}
                     <a href="{{site.baseurl }}{{ page.trumpocalypse-path }}?tag={{ tag | remove: " " | downcase }}">
-                      <span class="tag {{ tag | remove: " " | downcase }}" role="button">
+                      <span class="tag {{ tag | replace: " ", "-" | downcase }}" role="button">
                           &middot; {{ tag }}
                      </span>
                     </a>
