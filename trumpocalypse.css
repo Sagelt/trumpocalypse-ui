@@ -91,3 +91,19 @@ a:active {
   font-size: 12pt;
   color: #7b7b7b;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding-left: 1em; 
+  text-indent: -.7em;
+}
+
+li::before {
+  content: "• ";
+  color: #7b7b7b;
+}
