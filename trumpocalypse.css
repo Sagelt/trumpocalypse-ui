@@ -72,14 +72,20 @@ a:active {
 .title { 
   font-family: 'Cormorant Garamond', serif;
   font-size: 16pt;
-  margin: 2px 2px 0 8px;
+  text-align: justify;
+}
+
+.quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14pt;
+  font-style: italic;
+  text-align: justify;
 }
 
 .desc {
   font-family: 'Cormorant Garamond', serif;
   font-size: 14pt;
-  font-style: italic;
-  margin: 0 2px 2px 8px;
+  text-align: justify;
 }
 
 .top-buffer {

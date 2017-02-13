@@ -29,7 +29,8 @@ image: trump.jpg
   <meta property="twitter:image" content="http://{{ site.url }}{{ page.trumpocalypse-path }}{{ page.image }}">
 
   <script src="https://use.fontawesome.com/3543a4d7b1.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400i,600|Crimson+Text:600" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,500i,600|Crimson+Text:600" rel="stylesheet">
 
   <script>
     $(document).ready(function(){
@@ -113,6 +114,9 @@ image: trump.jpg
                 <div class="title"><a href="{{ event[1].url }}">{{ event[1].title }}</a></div>
                 {% if event[1].desc %}
                   <div class="desc">{{ event[1].desc }}</div>
+                {% endif %}
+                {% if event[1].quote %}
+                  <div class="quote">&ldquo;{{ event[1].quote }}&rdquo;</div>
                 {% endif %}
               </div>
               <div class="col-md-3">
