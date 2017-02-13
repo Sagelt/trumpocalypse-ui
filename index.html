@@ -49,7 +49,8 @@ image: trump.jpg
       if (tagToShow) {
         $(".event").not(".event-" + tagToShow).hide();
         $(".day-header").not(".day-" + tagToShow).hide();
-        $(".main-subtitle").prepend("Stories Tagged " + tagToShow + " ");
+        var tagToDisplay = tagToShow.replace(/\-/g, ' ')
+        $(".main-subtitle").prepend("Stories Tagged " + tagToDisplay + " ");
       }
     });
   </script>
@@ -93,7 +94,7 @@ image: trump.jpg
           {% assign seconds_diff = item_seconds | minus: dayzero_seconds %}
           {% assign days_in_office = seconds_diff | divided_by: 3600 | divided_by: 24 %}
           {% assign events = day[1] | sort %}
-          <div class="day-header {% for event in events %}{% for tag in event[1].tags %}day-{{ tag | remove: " " | downcase }} {% endfor %}{% endfor %}">
+          <div class="day-header {% for event in events %}{% for tag in event[1].tags %}day-{{ tag | replace: " ", "-" | downcase }} {% endfor %}{% endfor %}">
             <div class="row">
               <div class="col-md-4 col-md-offset-4">
                 <div class="day" id="{{ item_date }}">Day {{ days_in_office }}</div>
@@ -106,11 +107,11 @@ image: trump.jpg
             </div>
           </div> 
           {% for event in events reversed %}
-            <div class="row top-buffer event {% for tag in event[1].tags %}event-{{ tag | remove: " " | downcase }} {% endfor %}" id="{{ item_date }}-{{ event[0] }}">
+            <div class="row top-buffer event {% for tag in event[1].tags %}event-{{ tag | replace: " ", "-" | downcase }} {% endfor %}" id="{{ item_date }}-{{ event[0] }}">
               <div class="col-md-3 col-md-offset-1">
                 <div class="tag-box">
                   {% for tag in event[1].tags %}
-                    <a href="{{site.baseurl }}{{ page.trumpocalypse-path }}?tag={{ tag | remove: " " | downcase }}">
+                    <a href="{{site.baseurl }}{{ page.trumpocalypse-path }}?tag={{ tag | replace: " ", "-" | downcase }}">
                       <span class="tag {{ tag | replace: " ", "-" | downcase }}" role="button">
                           &middot; {{ tag }}
                      </span>
