@@ -30,6 +30,9 @@ As above, but replace the repo links being added with your own repos.
 
 Please send your pull requests! There's plenty of improvements to be made in the UI.
 
+## Credits
+Favicon by Fabián Sanabria.
+
 ## FAQ
 
 ### WHY?
