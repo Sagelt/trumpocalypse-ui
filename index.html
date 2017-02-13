@@ -51,7 +51,7 @@ image: trump.jpg
 
       var tagToShow = getUrlParameter("tag");
       if (tagToShow) {
-        $(".tag").not("." + tagToShow).hide();
+        $(".event").not("." + tagToShow).hide();
       }
     });
   </script>
@@ -112,10 +112,10 @@ image: trump.jpg
           </div>
           {% assign events = day[1] | sort %}
           {% for event in events reversed %}
-            <div class="row top-buffer" id="{{ item_date }}-{{ event[0] }}">
+            <div class="row top-buffer event {% for tag in event[1].tags %}{{ tag }}{% endfor %}" id="{{ item_date }}-{{ event[0] }}">
               <div class="col-md-3 col-md-offset-1">
                 <div class="tag-box">
-                  {% for tag in event[1].tags%}
+                  {% for tag in event[1].tags %}
                     <span class="tag {{ tag }}">
                       {% if tag == "Twitter" %}
                         {{ tag }} <i class="fa fa-twitter" aria-hidden="true"></i>
