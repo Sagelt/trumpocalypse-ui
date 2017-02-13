@@ -63,14 +63,6 @@ a:active {
   margin: 0 0 10px 0;
 }
 
-.tag-box {
-  vertical-align: top;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
 .info-box {
   vertical-align: top;
   margin: 15px;
@@ -96,12 +88,6 @@ a:active {
 
 .tag {
   font-family: 'Cormorant Garamond', serif;
-  display: inline-block;
-  margin: 3px;
-  padding-left: 3px;
-  padding-right: 3px;
-  padding-top: 0px;
-  padding-bottom: 0px;
   font-size: 12pt;
   color: #7b7b7b;
 }
