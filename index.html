@@ -119,8 +119,8 @@ image: trump.jpg
               <div class="col-md-3 col-md-offset-1">
                 <div class="tag-box">
                   {% for tag in event[1].tags %}
-                    <a href="{{site.baseurl }}{{ page.trumpocalypse-path }}?=tag={{ tag | downcase }}">
-                      <span class="tag {{ tag }}">
+                    <a href="{{site.baseurl }}{{ page.trumpocalypse-path }}?tag={{ tag | downcase }}">
+                      <span class="tag {{ tag }}" role="button">
                         {% if tag == "Twitter" %}
                           {{ tag }} <i class="fa fa-twitter" aria-hidden="true"></i>
                         {% elsif tag == "Lawsuit" %}
