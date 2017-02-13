@@ -110,16 +110,16 @@ image: trump.jpg
           </div> 
           {% for event in events reversed %}
             <div class="row top-buffer event {% for tag in event[1].tags %}event-{{ tag | replace: " ", "-" | downcase }} {% endfor %}" id="{{ item_date }}-{{ event[0] }}">
-              <div class="col-md-5 col-md-offset-2">
+              <div class="col-md-6 col-md-offset-3">
                 <div class="title"><a href="{{ event[1].url }}">{{ event[1].title }}</a></div>
-                {% if event[1].desc %}
-                  <div class="desc">{{ event[1].desc }}</div>
-                {% endif %}
                 {% if event[1].quote %}
                   <div class="quote">&ldquo;{{ event[1].quote }}&rdquo;</div>
                 {% endif %}
+                {% if event[1].desc %}
+                  <div class="desc">{{ event[1].desc }}</div>
+                {% endif %}
               </div>
-              <div class="col-md-3">
+              <div class="col-md-2">
                 <div class="tag-box">
                   <ul>
                     {% for tag in event[1].tags %}
