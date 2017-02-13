@@ -79,13 +79,13 @@ a:active {
 
 .title { 
   font-family: 'Cormorant Garamond', serif;
-  font-size: 12pt;
+  font-size: 14pt;
   margin: 2px 2px 0 8px;
 }
 
 .desc {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 10pt;
+  font-size: 12pt;
   font-style: italic;
   margin: 0 2px 2px 8px;
 }
