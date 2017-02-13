@@ -1,8 +1,9 @@
 .container {
-  font-family: 'Georgia', serif;
+
 }
 
 .main-title {
+  font-family: 'Vollkorn', serif;
   font-size: 36pt;
   font-weight: bold;
   font-variant: small-caps;
@@ -13,6 +14,7 @@
 }
 
 .main-subtitle {
+  font-family: 'Vollkorn', serif;
   font-size: 24pt;
   font-weight: bold;
   font-variant: small-caps;
@@ -21,6 +23,7 @@
 }
 
 .day {
+  font-family: 'Vollkorn', serif;
   font-size: 20pt;
   font-weight: bold;
   text-align: center;
@@ -28,6 +31,7 @@
 }
 
 .date {
+  font-family: 'Vollkorn', serif;
   font-size: 14pt;
   font-weight: bold;
   text-align: center;
@@ -48,12 +52,14 @@
   width: 100%;
 }
 
-.title {
+.title { 
+  font-family: 'Vollkorn', serif;
   font-size: 12pt;
   margin: 2px 2px 0 8px;
 }
 
 .desc {
+  font-family: 'Cormorant Garamond', serif;
   font-size: 10pt;
   font-style: italic;
   margin: 0 2px 2px 8px;
@@ -64,7 +70,7 @@
 }
 
 .tag {
-  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   display: inline-block;
   text-align: center;
   margin: 3px;
