@@ -53,7 +53,7 @@ image: trump.jpg
       if (tagToShow) {
         $(".event").not(".event-" + tagToShow).hide();
         $(".day-header").not(".day-" + tagToShow).hide();
-        $(".main-title").append(" — stories tagged " + tagToShow);
+        $(".main-subtitle").prepend("Stories Tagged " + tagToShow + " ");
       }
     });
   </script>
