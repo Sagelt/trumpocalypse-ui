@@ -108,7 +108,7 @@ image: trump.jpg
           </div> 
           {% for event in events reversed %}
             <div class="row top-buffer event {% for tag in event[1].tags %}event-{{ tag | replace: " ", "-" | downcase }} {% endfor %}" id="{{ item_date }}-{{ event[0] }}">
-              <div class="col-md-3 col-md-offset-1">
+              <div class="col-md-3 col-md-offset-2">
                 <div class="tag-box">
                   {% for tag in event[1].tags %}
                     <a href="{{site.baseurl }}{{ page.trumpocalypse-path }}?tag={{ tag | replace: " ", "-" | downcase }}">
@@ -119,7 +119,7 @@ image: trump.jpg
                   {% endfor %}
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-5">
                 <div class="title"><a href="{{ event[1].url }}">{{ event[1].title }}</a></div>
                 {% if event[1].desc %}
                   <div class="desc">{{ event[1].desc }}</div>
