@@ -84,7 +84,7 @@ image: trump.jpg
     {% for tag in tags %}
       {% cycle 'opentag': "<div class='row'><div class='col-md-1 col-md-offset-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>" %}
         {{ tag }}
-      {% cycle 'closetag': "</div>", "</div>", "</div>", "</div>", "</div>", "</div>", "</div>", "", "</div>", "</div></div>" %}
+      {% cycle 'closetag': "</div>", "</div>", "</div>", "</div>", "</div>", "</div>", "</div>", "</div>", "</div>", "</div></div>" %}
     {% endfor %}
   </div>
 </body>
