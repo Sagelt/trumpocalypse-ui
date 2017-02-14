@@ -38,13 +38,34 @@ a:active {
   border-width: 0 0 2px 0;
 }
 
+.subtitle-row {
+  margin: 10px 0 20px 0;
+}
+
 .main-subtitle {
   font-family: 'Crimson Text', serif;
   font-size: 24pt;
   font-weight: bold;
   font-variant: small-caps;
   text-align: center;
-  margin: 10px 0 20px 0;
+}
+
+.header-link-left {
+  font-family: 'Crimson Text', serif;
+  font-size: 20pt;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-align: left;
+  color: #7b7b7b;
+}
+
+.header-link-right {
+  font-family: 'Crimson Text', serif;
+  font-size: 20pt;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-align: right;
+  color: #7b7b7b;
 }
 
 .day {
