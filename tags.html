@@ -1,0 +1,88 @@
+---
+title: trumpocalypse - tag list
+description: a list of all event tags
+trumpocalypse-path: /pages/trumpocalypse/
+image: trump.jpg
+---
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trumpocalypse</title>
+  <link rel="icon" type="image/png" href="http://{{ site.url }}{{ page.trumpocalypse-path }}favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:url" content="http://{{ page.url | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:description" content="{{ page.description | escape }}">
+  <meta property="og:image" content="http://{{ site.url }}{{ page.trumpocalypse-path }}{{ page.image }}">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="{{ page.description | escape }}">
+  <meta name="twitter:title" content="{{ page.title | escape }}">
+  <meta name="twitter:url" content="http://{{ page.url | prepend: site.baseurl | prepend: site.url }}">
+  <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  <meta name="twitter:creator" content="@{{ site.twitter_username }}">
+  <meta name="twitter:domain" content="{{ site.url }}">
+  <meta property="twitter:image" content="http://{{ site.url }}{{ page.trumpocalypse-path }}{{ page.image }}">
+
+  <script src="https://use.fontawesome.com/3543a4d7b1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,500i,600|Crimson+Text:600" rel="stylesheet">
+
+  {% if site.google_analytics %}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', '{{ site.google_analytics }}', 'auto');
+      ga('send', 'pageview');
+    </script>
+  {% endif %}
+
+  <link rel="stylesheet" href="{{site.baseurl }}{{ page.trumpocalypse-path }}trumpocalypse.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="main-title"><a href="http://{{ site.url }}{{ page.trumpocalypse-path }}">The Trump Administration</a></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="main-subtitle">Tags</div>
+      </div>
+    </div>
+
+    {% assign years = site.data.trumpocalypse | sort %}
+    {% assign dayzero_seconds = "2017-01-19" | date: '%s' %} 
+    {% assign tags = "Glorious Leader, AltFacts" | split: ", " %}
+
+    {% for year in years reversed %}
+      {% assign months = year[1] | sort %}
+      {% for month in months reversed %}
+        {% assign days = month[1] | sort %}
+        {% for day in days reversed %}
+          {% assign item_date = year[0] | append: "-" | append: month[0] | append: "-" | append: day[0] %}
+          {% assign item_seconds = item_date | date: '%s' %}
+          {% assign seconds_diff = item_seconds | minus: dayzero_seconds %}
+          {% assign days_in_office = seconds_diff | divided_by: 3600 | divided_by: 24 %}
+          {% assign events = day[1] | sort %}
+          {% for event in events reversed %}
+            {% assign tags = tags | concat: event[1].tags %}
+          {% endfor %}
+        {% endfor %}
+      {% endfor %}
+    {% endfor %}
+    {% assign tags = tags | uniq %}
+    <ul>
+      {% for tag in tags %}
+        <li>{{ tag }}</li>
+      {% endfor %}
+    <ul>
+  </div>
+</body>
