@@ -50,21 +50,12 @@ a:active {
   text-align: center;
 }
 
-.header-link-left {
+.header-link {
   font-family: 'Crimson Text', serif;
   font-size: 20pt;
   font-weight: bold;
   font-variant: small-caps;
-  text-align: left;
-  color: #7b7b7b;
-}
-
-.header-link-right {
-  font-family: 'Crimson Text', serif;
-  font-size: 20pt;
-  font-weight: bold;
-  font-variant: small-caps;
-  text-align: right;
+  text-align: center;
   color: #7b7b7b;
 }
 
