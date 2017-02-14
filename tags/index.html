@@ -83,7 +83,7 @@ image: trump.jpg
     {% assign tags = tag_string | split: "," | uniq | sort%}
     {% for tag in tags %}
       {% cycle 'opentag': "<div class='row'><div class='col-md-3 col-md-offset-2'>", "<div class='col-md-3'>", "<div class='col-md-3'>" %}
-        <div class='tag-list'>{{ tag }}</div>
+        <a href="{{site.baseurl }}{{ page.trumpocalypse-path }}?tag={{ tag | replace: " ", "-" | downcase }}"><div class='tag-list'>{{ tag }}</div></a>
       {% cycle 'closetag': "</div>", "</div>", "</div></div>" %}
     {% endfor %}
   </div>
