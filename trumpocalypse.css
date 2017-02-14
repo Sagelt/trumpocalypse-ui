@@ -51,11 +51,7 @@ a:active {
 }
 
 .header-link {
-  font-family: 'Crimson Text', serif;
-  font-size: 20pt;
-  font-weight: bold;
-  font-variant: small-caps;
-  text-align: center;
+  font-size: 18pt;
   color: #7b7b7b;
 }
 
