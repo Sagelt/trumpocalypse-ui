@@ -89,13 +89,17 @@ a:active {
 }
 
 .top-buffer {
-  margin-top:20px;
+  margin-top: 50px;
 }
 
 .tag {
   font-family: 'Cormorant Garamond', serif;
   font-size: 12pt;
   color: #7b7b7b;
+}
+
+.tag-box {
+  margin: 5px 0 5px 0;
 }
 
 ul {
