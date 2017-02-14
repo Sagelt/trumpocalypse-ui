@@ -1,0 +1,79 @@
+---
+title: trumpocalypse - about
+description: about the trumpocalypse project
+trumpocalypse-path: /pages/trumpocalypse/
+image: trump.jpg
+---
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trumpocalypse</title>
+  <link rel="icon" type="image/png" href="http://{{ site.url }}{{ page.trumpocalypse-path }}favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:url" content="http://{{ page.url | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:description" content="{{ page.description | escape }}">
+  <meta property="og:image" content="http://{{ site.url }}{{ page.trumpocalypse-path }}{{ page.image }}">
+  <meta property="og:type" content="article">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:description" content="{{ page.description | escape }}">
+  <meta name="twitter:title" content="{{ page.title | escape }}">
+  <meta name="twitter:url" content="http://{{ page.url | prepend: site.baseurl | prepend: site.url }}">
+  <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  <meta name="twitter:creator" content="@{{ site.twitter_username }}">
+  <meta name="twitter:domain" content="{{ site.url }}">
+  <meta property="twitter:image" content="http://{{ site.url }}{{ page.trumpocalypse-path }}{{ page.image }}">
+
+  <script src="https://use.fontawesome.com/3543a4d7b1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:500,500i,600|Crimson+Text:600" rel="stylesheet">
+
+  {% if site.google_analytics %}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', '{{ site.google_analytics }}', 'auto');
+      ga('send', 'pageview');
+    </script>
+  {% endif %}
+
+  <link rel="stylesheet" href="{{site.baseurl }}{{ page.trumpocalypse-path }}trumpocalypse.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="main-title"><a href="http://{{ site.url }}{{ page.trumpocalypse-path }}">The Trump Administration</a></div>
+      </div>
+    </div>
+
+    <div class="row subtitle-row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="header-nav">
+          <a class="header-link" href="http://{{ site.url }}{{ page.trumpocalypse-path }}">Home</a> —  <a href="http://{{ site.url }}{{ page.trumpocalypse-path }}about">About</a> — <a class="header-link" href="http://{{ site.url }}{{ page.trumpocalypse-path }}tags">Tags</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="title">Our Slow Slide Out Of Normal</div>
+        <div class="desc">The Trump Administration has not been normal. It is not normal for American citizens to fear persecution for their race, religion, or orientation on a daily basis. It is not normal for the Preisdent to use his office to serve his own business interests. It is not normal for our government to be disfunctional to the point of humor. This is not normal.</div>
+        <div class="desc">It is easy to lose track of this. The slide out or normality happens slowly. Each day is just a little odd, but over time we drift from who we are as a nation.</div>
+        <div class="desc">The Trumpocalypse Project is my way of tracking this slide. It can't be complete—there's too much happening. This is my log of how each day feels a little less normal.</div>
+        <div class="quote">I am loath to close. We are not enemies, but friends. We must not be enemies. Though passion may have strained it must not break our bonds of affection. The mystic chords of memory, stretching from every battlefield and patriot grave to every living heart and hearthstone all over this broad land, will yet swell the chorus of the Union, when again touched, as surely they will be, by the better angels of our nature.</div>
+        <div class="desc">— Abraham Lincoln, First Inaugural Address</div>
+        <div class="title">Powered by git</div>
+        <div class="desc">This project is run as a pair of git repos: <a href="https://github.com/Sagelt/trumpocalypse">one for data</a> and <a href="https://github.com/Sagelt/trumpocalypse-ui">one for UI</a>.</div>
+        <div class="title">By Sage LaTorra</div>
+        <div class="desc">You may know Sage from <a href="http://dungeon.world">Dungeon World</a>.</div>
+      </div>
+    </div>
+  </div>
+</body>
