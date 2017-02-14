@@ -53,6 +53,8 @@ image: trump.jpg
         $(".day-header").not(".day-" + tagToShow).hide();
         var tagToDisplay = tagToShow.replace(/\-/g, ' ')
         $(".main-subtitle").prepend("Stories Tagged '" + tagToDisplay + "' ");
+      } else {
+        $(".main-subtitle-row").hide();
       }
     });
   </script>
@@ -85,7 +87,7 @@ image: trump.jpg
       </div>
     </div>
 
-    <div class="row subtitle-row">
+    <div class="row subtitle-row main-subtitle-row">
       <div class="col-md-10 col-md-offset-1">
         <div class="main-subtitle">
         </div>
