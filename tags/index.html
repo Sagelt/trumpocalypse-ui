@@ -60,7 +60,7 @@ image: trump.jpg
 
     {% assign years = site.data.trumpocalypse | sort %}
     {% assign dayzero_seconds = "2017-01-19" | date: '%s' %} 
-    {% assign tags = "Glorious Leader, AltFacts" | split: ", " %}
+    {% assign tag_string = "" %}
 
     {% for year in years reversed %}
       {% assign months = year[1] | sort %}
@@ -73,12 +73,14 @@ image: trump.jpg
           {% assign days_in_office = seconds_diff | divided_by: 3600 | divided_by: 24 %}
           {% assign events = day[1] | sort %}
           {% for event in events reversed %}
-            {% assign tags = tags | concat: event[1].tags %}
+            {% assign event_tags_string = event[1].tags | join: "," %}
+            {% assign tmp_string = tag_string %}
+            {% assign tag_string = tmp_string | append: "," | append: event_tags_string %}
           {% endfor %}
         {% endfor %}
       {% endfor %}
     {% endfor %}
-    {% assign tags = tags | uniq %}
+    {% assign tags = tag_string | split: "," | uniq %}
     <ul>
       {% for tag in tags %}
         <li>{{ tag }}</li>
