@@ -52,7 +52,7 @@ image: trump.jpg
         $(".event").not(".event-" + tagToShow).hide();
         $(".day-header").not(".day-" + tagToShow).hide();
         var tagToDisplay = tagToShow.replace(/\-/g, ' ')
-        $(".main-subtitle").prepend("Stories Tagged " + tagToDisplay + " ");
+        $(".main-subtitle").prepend("Stories Tagged '" + tagToDisplay + "' ");
       }
     });
   </script>
