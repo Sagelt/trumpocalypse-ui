@@ -60,7 +60,7 @@ image: trump.jpg
 
     {% assign years = site.data.trumpocalypse | sort %}
     {% assign dayzero_seconds = "2017-01-19" | date: '%s' %} 
-    {% assign tag_string = "" %}
+    {% assign tag_string = "Sigh" %}
 
     {% for year in years reversed %}
       {% assign months = year[1] | sort %}
@@ -80,11 +80,11 @@ image: trump.jpg
         {% endfor %}
       {% endfor %}
     {% endfor %}
-    {% assign tags = tag_string | split: "," | uniq %}
-    <ul>
-      {% for tag in tags %}
-        <li>{{ tag }}</li>
-      {% endfor %}
-    <ul>
+    {% assign tags = tag_string | split: "," | uniq | sort%}
+    {% for tag in tags %}
+      {% cycle 'opentag': "<div class='row'><div class='col-md-1 col-md-offset-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>", "<div class='col-md-1'>" %}
+        {{ tag }}
+      {% cycle 'closetag': "</div>", "</div>", "</div>", "</div>", "</div>", "</div>", "</div>", "", "</div>", "</div></div>" %}
+    {% endfor %}
   </div>
 </body>
