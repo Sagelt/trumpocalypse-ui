@@ -43,16 +43,24 @@ a:active {
 }
 
 .main-subtitle {
+    font-family: 'Crimson Text', serif;
+    font-size: 24pt;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+.header-nav {
   font-family: 'Crimson Text', serif;
-  font-size: 24pt;
+  font-size: 20pt;
   font-weight: bold;
   font-variant: small-caps;
   text-align: center;
 }
 
 .header-link {
-  font-size: 18pt;
-  color: #7b7b7b;
+  font-size: 16pt;
+  color: #7b7b7b !important;
 }
 
 .day {
