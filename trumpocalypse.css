@@ -137,7 +137,7 @@ li {
 }
 
 li::before {
-  content: "&bull; ";
+  content: "• ";
   color: #7b7b7b;
 }
 
